@@ -32,10 +32,17 @@ This guide will walk you through setting up the backend connection for the aazhi
     npm install cors
     ```
 
-5. Install MySQL latest version:
-    ```bash
+5. Install MULTER packages:
+       ```bash
+    npm install multer
+    ```
+6. Install MySQL latest version:
+       ```bash
     npm install mysql@latest
     ```
+
+
+    
 
 ## Setting up MySQL
 
