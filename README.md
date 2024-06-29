@@ -1,8 +1,8 @@
 # fantastic-july-fishdeploy
 Deploying an express application
-# Backend Connection Setup
+# Backend Connection Setup for Aazhi-fishes
 
-This guide will walk you through setting up the backend connection for the Fruitka project.
+This guide will walk you through setting up the backend connection for the Aazhi_fishes project.
 
 ## Prerequisites
 
