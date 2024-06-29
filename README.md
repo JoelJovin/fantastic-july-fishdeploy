@@ -1,6 +1,6 @@
 # fantastic-july-fishdeploy
 Deploying an express application
-# Backend Connection Setup for Fruitka
+# Backend Connection Setup
 
 This guide will walk you through setting up the backend connection for the Fruitka project.
 
