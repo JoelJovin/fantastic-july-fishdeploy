@@ -18,7 +18,7 @@ This guide will walk you through setting up the backend connection for the Aazhi
 
 2. Change directory to backend:
     ```bash
-    cd /Users/jjaisankar/draft/aazhi-fishes/backend
+    cd /aazhi-fishes/backend
     ```
 
 3. Install Express package:
