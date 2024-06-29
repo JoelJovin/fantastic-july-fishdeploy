@@ -1,0 +1,21 @@
+{
+    "name": "aazhi-fishes",
+    "version": "1.0.0",
+    "description": "Aazhi fishes is a fish buying and selling web based application",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js" 
+    },
+    "dependencies": {
+      "express": "latest",
+    "mysql": "latest",
+    "cors": "latest",
+    "multer": "latest"
+    },
+    "devDependencies": {
+      
+    },
+    "author": "Sesslyn",
+    "license": "MIT"
+  }
+  

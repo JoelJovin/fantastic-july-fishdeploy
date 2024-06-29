@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    font-family: 'Jost', sans-serif;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 200px;
+    position: absolute;
+    bottom: 87%;
+    height:150px;
+    top:35px;
+}
+
+.container-form {
+    position: relative;
+    width: 30%;
+    height: 78%;
+    padding: 2%;
+    background-color: white;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+div.x-mark i {
+    color: #555;
+    float: right;
+    font-size: 25px;
+    position: absolute;
+    top: 2%;
+    right: 3%;
+}
+
+.container-form h2 {
+    font-weight: 500;
+    padding-bottom: 4%;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+.container-form .label_field {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.container-form .input_field{
+    font-family: 'Jost', sans-serif;
+    padding-left: 2%;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #000;
+    margin-top: 1%;
+}
+
+
+.container-form .form-control.success .input_field {
+    font-family: 'Jost', sans-serif;
+    padding-left: 2%;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #000;
+    margin-top: 1%;
+}
+
+.container-form .form-control.error .input_field {
+    font-family: 'Jost', sans-serif;
+    padding-left: 2%;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #e74c3c;
+    margin-top: 1%;
+}
+
+.form-control small{
+    /* visibility:hidden; */
+    color:#e74c3c;
+    font-size:12px;
+}
+
+.container-form div{
+    margin-bottom: 1.5%;
+}
+
+.container-form #togglePassword{
+    position:relative;
+    font-size: 14px;
+    color:grey;
+    bottom:28px;
+    left:20rem;
+}
+
+/* 
+.container-form .input_field{
+    font-family: 'Jost', sans-serif;
+    padding-left: 2%;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #FF0000;
+    margin-top: 1%;
+} */
+
+.container button {
+    font-family: 'Jost', sans-serif;
+    margin-top: 6%;
+    font-size: 18px;
+    width: 100%;
+    background-color: #005baa;
+    background-image: linear-gradient(45deg, #005baa, #000000);
+    color: #fff;
+    padding: 3%;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+
+}
+
+.container div:last-child span {
+    font-size: 18px;
+}
+
+.container div:last-child a {
+    font-family: 'Jost', sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+
+}
+
+
+@media(max-width:360px) {
+    .container-form {
+        width: 80%;
+        margin-top: 3rem;
+    }
+
+    .container-form #togglePassword {
+        left: 18rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .container-form {
+       width: 400px;
+    }
+
+    .container-form #togglePassword {
+        left: 18rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .conatiner{
+        padding: 0px 20px;
+    }
+    img{
+        top:10px;
+    }
+    .container-form {
+        padding: 15px; 
+       margin: 0px 20px;
+       height:82%;
+    }
+
+    .container-form .input_field,
+    .container-form #togglePassword {
+        font-size: 14px; /* Decrease font size for inputs and icon */
+    }
+
+    .container-form #togglePassword {
+        left: 18rem;
+    }
+   
+    .container button {
+        font-size: 14px; /* Decrease button font size */
+    }
+
+    .container div:last-child span {
+        font-size: 14px; /* Decrease font size for text */
+    }
+}

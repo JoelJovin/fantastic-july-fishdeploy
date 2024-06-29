@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"
+		content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+
+	<!-- title -->
+	<title>Single Product</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="../../css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="../../css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="../../css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="../../css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="../../css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../../css/main.css">
+	<!-- responsive -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="../../css/scss/vendor/nice-select.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../../css/homepage/style.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="../../css/responsive.css">
+	<link rel="stylesheet" href="../../css/admin/mobile-header.css">
+	<link rel="stylesheet" href="../../css/flaticon.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="../../../index.html">
+								<img src="../../img/logo.jpg" alt="">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li class="current-list-item"><a href="../../../index.html">Home</a></li>
+								<li><a href="../homepage/about.html">About</a></li>
+								<li><a href="./shop.html">Shop</a></li>
+								<li><a href="">Order</a></li>
+								<li><a href="">Contact</a></li>
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart" href="./cart.html"><i
+												class="fas fa-shopping-cart"></i></a>
+										<a href="../homepage/login.html"><button class="login-btn">Login</button></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>See more Details</p>
+						<h1>Single Product</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- single product -->
+	<div class="single-product mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<div class="single-product-img">
+						<img id="img"alt="">
+					</div>
+				</div>
+				<div class="col-md-7">
+					<div class="single-product-content">
+						<h3><span class="tamil-name" id="name"></span></h3>
+						<div class="prices">
+							<div class="flex-price">
+								<span id="price-old" class="price-old">₹ </span>
+								<span class="price-old-name">MRP</span>
+							</div>
+							<div class="flex-price">
+								<span id ='price' class="price">₹ </span>
+								<span class="price-name">OFFER</span>
+							</div>
+
+						</div>
+						<div class="prices">
+							<div class="form-quantity">
+								<div class="qty-input">
+									<button class="qty-count qty-count--minus" data-action="minus" type="button">-</button>
+									<input class="product-qty" type="number" name="product-qty" min="1" max="10" id="val">
+									<button class="qty-count qty-count--add" data-action="add" type="button">+</button>
+								</div>
+							</div>
+							<div class="toggle">
+								<label class="switch">
+									<input type="checkbox">
+									<div class="slider"></div>
+									<div class="slider-card">
+										<div class="slider-card-face slider-card-front"></div>
+										<div class="slider-card-face slider-card-back"></div>
+									</div>
+								</label>
+							</div>
+							<div>
+								<div class="add-to-cart"><a  class="cart-btn single-product-cart"><i
+											class="fas fa-shopping-cart"></i><button id="card" style="background: none; border: none; color: inherit; padding: 0; font: inherit; cursor: pointer;">Add</button>
+										</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="product-details">
+							<div id="product-details"></div>
+							<h4>More Info about the products</h4>
+
+							<div class="container-faq" id="product-extra">
+								<div class="accordion">
+									<div class="accordion-item">
+										<button id="accordion-button-1" aria-expanded="false"><span
+												class="accordion-title">Product Details</span><span class="icon"
+												aria-hidden="true"></span></button>
+										<div class="accordion-content">
+											<p><span>Ideal for:</span> <span> Prawn biryani, Malabar prawn curry, stir
+													fried
+													prawns.</span>
+											</p>
+											<p><span>Health Benefits:</span> <span> Low Fat fish, good for Gym
+													ethusiasts and muscle development.</span>
+											</p>
+											<p> <span>Freshness Indicator:</span><span> Fresh Prawns should smell fresh
+													and
+													clean and
+													look
+													moist.</span></p>
+											<p><span>Also known as:</span> <span> Chemmeen, Jinga</span></p>
+											<p><span>Tips:</span><span> Prawns cook very quickly and should be watched
+													over
+													carefully.
+													When
+													boiled, sautéed or steamed, prawns are cooked when they curl to form
+													the
+													letter C
+													and
+													overcooked when they form an O.
+												</span>
+											</p>
+										</div>
+									</div>
+									<div class="accordion-item">
+										<button id="accordion-button-2" aria-expanded="false"><span
+												class="accordion-title">Nutrition Index</span><span class="icon"
+												aria-hidden="true"></span></button>
+										<div class="accordion-content">
+											<p>Nutrition Index <br>
+												Protein 21.55 g<br>
+												Saturated 0.726 g<br>
+												Poly unsaturated 0.713 g<br>
+												Mono-unsaturated –<br>
+												Total Fat 7 g<br>
+												Cholesterol 13 mg<br>
+												Carbohydrates –<br>
+												Vit A 13.68μg<br>
+												Vit C –<br>
+												Vit D 12.54μg<br>
+												Vit E 1.03 mg<br>
+												Vit B1 –<br>
+												Vit B2 –<br>
+												Vit B-6 0.35 mg<br>
+												Vit B-12 2.62μg<br>
+												Potassium 320 mg<br>
+												Soidum 120 mg<br>
+												Calcium 46.74 mg<br>
+												Magnesium 38.76 mg<br>
+												Iron 0.34 mg<br>
+												Magnesium 0.01 mg<br>
+												Phosphorus 159.6 mg<br>
+												Zinc 0.57 mg<br>
+												Cobalamin –<br>
+												Copper 0.05 mg<br>
+												Selenium –<br>
+												Folate 9.12μg<br>
+												Pantothenic Acid 0.54 mg<br>
+												Thiamin –<br>
+												Riboflavin –<br>
+												Niacin 5.13 mg<br>
+												Choline –<br>
+												Omega Fatty Acids –<br>
+											</p>
+										</div>
+									</div>
+									<div class="accordion-item">
+										<button id="accordion-button-1" aria-expanded="false"><span
+												class="accordion-title">Procedure to use</span><span class="icon"
+												aria-hidden="true"></span></button>
+										<div class="accordion-content">
+											<p>Best for 3 days. Please wait for 5 mins after opening package, before
+												washing.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end single product -->
+
+	<div class="corner-icons navbar-mobile-corner">
+		<a class="left-arrow-icon" href="#"><i class="fas fa-arrow-left"></i></a>
+		<a class="shopping-cart-icon" href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
+	</div>
+
+
+	<div class="testimonail-section mt-150 mb-80">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1 text-center">
+					<div class="testimonial-sliders">
+						<div class="single-testimonial-slider">
+							<div class="client-avater">
+								<img src="https://lh3.googleusercontent.com/a-/ALV-UjX2Fiie5dO4LpUCHwGtW0y4vDKvZ7yIwASdmr5LUJ1EpZbLRRgH=w120-h120-p-rp-mo-br100" alt="">
+							</div>
+							<div class="client-meta">
+								<h3>Dominic Irudayaraj<span>Customer</span>
+								<span><label for="rate-5" class="fas fa-star"></label>
+									<label for="rate-4" class="fas fa-star"></label>
+									<label for="rate-3" class="fas fa-star"></label>
+									<label for="rate-2" class="fas fa-star"></label>
+									<label for="rate-1" class="fas fa-star"></label></span></h3>
+								<p class="testimonial-body">
+									"From the inception of Aazhi Fishes shop, I have been a regular Customer here. The shop has many
+									 salient features and has earned a good name among its elite cuatomers within such a short period
+									  of time."
+								</p>
+								
+
+								<div class="last-icon">
+									<i class="fas fa-quote-right"></i>
+								</div>
+							</div>
+						</div>
+						<div class="single-testimonial-slider">
+							<div class="client-avater">
+								<img src="https://lh3.googleusercontent.com/a-/ALV-UjVgtR7Bh7OBCqmHhT1oyLxXe2gR33ITxjYcCJhN5ghew4OzD2My=w120-h120-p-rp-mo-br100" alt="">
+							</div>
+							<div class="client-meta">
+								<h3>Arun Immanuel <span>Customer</span>
+									<span><label for="rate-5" class="fas fa-star"></label>
+										<label for="rate-4" class="fas fa-star"></label>
+										<label for="rate-3" class="fas fa-star"></label>
+										<label for="rate-2" class="fas fa-star"></label>
+										<label for="rate-1" class="fas fa-star"></label></span></h3>
+								<p class="testimonial-body">
+									"Thank You Aazhi for such good quality fishes.
+									It’s exceedingly fresh and delicious.
+									Worth the price & will definitely buy again.
+									Must try for anyone who love fresh fish."
+								</p>
+
+								<div class="last-icon">
+									<i class="fas fa-quote-right"></i>
+								</div>
+							</div>
+						</div>
+						<div class="single-testimonial-slider">
+							<div class="client-avater">
+								<img src="https://lh3.googleusercontent.com/a-/ALV-UjXfdfPJMpsD6Xnem3WZv9IFfG0-MFcpa63-bHwitJ4cMwkrSGlM=w120-h120-p-rp-mo-br100" alt="">
+							</div>
+							<div class="client-meta">
+								<h3>Christina Jenifer <span>Customer</span>
+									<span><label for="rate-5" class="fas fa-star"></label>
+										<label for="rate-4" class="fas fa-star"></label>
+										<label for="rate-3" class="fas fa-star"></label>
+										<label for="rate-2" class="fas fa-star"></label>
+										<label for="rate-1" class="fas fa-star"></label></span></h3>
+								<p class="testimonial-body">
+									"I am a regular customer and I find the shop really great and it is very hygienic.The packaging is neatly done too. I would highly recommend Aazhi fishes. 
+									There are combo offers too during special seasons which are quite affordable.
+									Do check out their fishes.. !!"
+								</p>
+								
+								<div class="last-icon">
+									<i class="fas fa-quote-right"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+
+	<!-- more products -->
+	<div class="product-section mt-100 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-title">
+						<h3><span class="orange-text">More</span> Products</h3>
+						<p>From sea to skillet, our fish are the pinnacle of quality and flavor—dive into a
+							culinary
+							adventure that's as fresh as it gets!</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row product-list" id="wrap-row">
+				<div class="col-lg-4 col-md-6 text-center product-list-scroll">
+					<div class="single-product-item scroll-div">
+						<div class="product-image">
+							<a href="single-product.html"><img src="../../img/index/raw-img1.jpeg"
+									alt=""></a>
+						</div>
+						<h3 class="title"><a href="./single-product.html">சீலா [English: Barracuda]</a></h3>
+						<p class="product-price"><span>Per Kg</span></p>
+						<div class="index prices">
+							<span class="price">₹ 500</span>
+							<span class="price-old">₹ 450</span>
+						</div>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center product-list-scroll">
+					<div class="single-product-item scroll-div">
+						<div class="product-image">
+							<a href="single-product.html"><img src="../../img/index/raw-img1.jpeg"
+									alt=""></a>
+						</div>
+						<h3 class="title" id ="title"><a href="./single-product.html"></a></h3>
+						<p class="product-price"><span>Per Kg</span></p>
+						<div class="index prices">
+							<span class="price">₹ 500</span>
+							<span class="price-old">₹ 450</span>
+						</div>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center product-list-scroll">
+					<div class="single-product-item scroll-div">
+						<div class="product-image">
+							<a href="single-product.html"><img src="../../img/index/raw-img1.jpeg"
+									alt=""></a>
+						</div>
+						<h3 class="title"><a href="./single-product.html">சீலா [English: Barracuda]</a></h3>
+						<p class="product-price"><span>Per Kg</span></p>
+						<div class="index prices">
+							<span class="price">₹ 500</span>
+							<span class="price-old">₹ 450</span>
+						</div>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end more products -->
+
+
+	<!-- footer -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row footer-row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">About us</h2>
+						<p>Aazhi fishes, sourced from the depths of the Indian Ocean, offer a taste of maritime
+							excellence and culinary delight.ndulge in the rich flavors of Aazhi fishes, prized
+							for their
+							freshness and unique coastal essence, bringing a symphony of sea to your plate</p>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 footer-second-div">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Pages</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="services.html">Shop</a></li>
+							<li><a href="news.html">News</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box subscribe">
+						<h2 class="widget-title">Get in Touch</h2>
+						<ul>
+							<li>No.44/B, Arcot road, nearKodambaakam bridge.</li>
+							<li>Next to HDFC Bank, Chennai-24</li>
+							<li>+91 70922 34564</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+
+
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>, All
+						Rights
+						Reserved.<br>
+						Distributed By - <a href="https://themewagon.com/">Themewagon</a>
+					</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		const items = document.querySelectorAll(".accordion button");
+
+		function toggleAccordion() {
+			const itemToggle = this.getAttribute('aria-expanded');
+
+			for (i = 0; i < items.length; i++) {
+				items[i].setAttribute('aria-expanded', 'false');
+			}
+
+			if (itemToggle == 'false') {
+				this.setAttribute('aria-expanded', 'true');
+			}
+		}
+
+		items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+		document.addEventListener('DOMContentLoaded', function () {
+			const minusButton = document.querySelector('.qty-count--minus');
+			const plusButton = document.querySelector('.qty-count--add');
+			const quantityInput = document.querySelector('.product-qty');
+
+			minusButton.addEventListener('click', function () {
+				let currentValue = parseInt(quantityInput.value);
+				if (currentValue > 1) {
+					quantityInput.value = currentValue - 1;
+				}
+			});
+
+			plusButton.addEventListener('click', function () {
+				let currentValue = parseInt(quantityInput.value);
+				if (currentValue < 10) {
+					quantityInput.value = currentValue + 1;
+				}
+			});
+		});
+	</script>
+ <script>
+   document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('product_id');
+        
+        if (productId) {
+            fetchProductDetails(productId);
+        }
+    });
+
+    function fetchProductDetails(productId) {
+        fetch(`/getproductid?productId=${encodeURIComponent(productId)}`)
+            .then(response => response.json())
+            .then(product => {
+				console.log(product);
+				const discountedPrice = product.products[0].actual_price * (1 - product.products[0].discount / 100);
+
+             document.getElementById("name").innerText=product.products[0].product_name_tamil;
+			 document.getElementById("price-old").innerText=product.products[0].actual_price;
+			 document.getElementById("price").innerText=discountedPrice;
+			 document.getElementById("img").src='data:image/jpeg;base64,'+product.products[0].image_data;
+			 document.getElementById("val").value=product.products[0].pieces;
+			 document.getElementById("product-details").innerText=product.products[0].product_description
+			 document.getElementById("card").addEventListener('click', function() {
+            const productId = this.getAttribute('data-product-id');
+            console.log('Adding product to cart:', productId);
+            let user_id = sessionStorage.getItem('user_id');
+            let status = "no";
+            let product_id = product.products[0].id;
+            let product_quantity = product.products[0].pieces;
+            let product_price = discountedPrice;
+            let address_id = sessionStorage.getItem('address_id');
+            let user = { user_id, status, product_id, product_quantity, product_price, address_id };
+
+            fetch(`/order`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(user)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    alert('Product added to cart successfully!');
+					
+                } else {
+                    alert('Error: ' + data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while adding product to cart. Please try again.');
+            });
+		});
+            })
+            .catch(error => {
+                console.error('Error fetching product details:', error);
+            });
+
+			
+    }
+	</script>
+	<!-- end copyright -->
+ 
+	<script src="../../js/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="../../bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="../../js/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="../../js/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="../../js/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="../../js/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="../../js/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="../../js/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="../../js/sticker.js"></script>
+	<!-- main js -->
+	<script src="../../js/main.js"></script>
+	<script src="../../js/vendor/jquery.nice-select.min.js"></script>
+	<!-- main js -->
+	<script src="../../js/profile/index.js"></script>
+</body>
+
+</html>

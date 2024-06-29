@@ -1,0 +1,631 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"
+		content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+
+	<!-- title -->
+	<title>Cart</title>
+	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+
+	<!-- main style -->
+	<link rel="stylesheet" href="../../css/product/cart.css">
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="../../css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="../../css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="../../css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="../../css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="../../css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../../css/main.css">
+	<!-- responsive -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="../../css/scss/vendor/nice-select.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../../css/homepage/style.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="../../css/responsive.css">
+	<link rel="stylesheet" href="../../css/admin/mobile-header.css">
+	<link rel="stylesheet" href="../../css/flaticon.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- header -->
+	<div class="top-header-area" style="height: 100px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="../../../index.html">
+								<img src="../../img/logo.jpg" alt="">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li class="current-list-item"><a href="../../../index.html">Home</a></li>
+								<li><a href="../homepage/about.html">About</a></li>
+								<li><a href="./shop.html">Shop</a></li>
+								<li><a href="">Order</a></li>
+								<li><a href="">Contact</a></li>
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart" href="cart.html"><i
+												class="fas fa-shopping-cart"></i></a>
+										<a href="../homepage/login.html"><button class="login-btn">Login</button></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- cart -->
+	<main class="container-cart">
+		<h1 class="heading">
+			<ion-icon name="cart-outline"></ion-icon> Shopping Cart
+		</h1>
+		<div class="item-flex">
+			<!-- chekout -->
+			<section class="checkout">
+				<h2 class="section-heading">Delivery & Payment Details</h2>
+				<div class="payment-form">
+					<div class="payment-method">
+						<button class="method selected">
+							<ion-icon name="card"></ion-icon>
+							<span>Delivery Information</span>
+							<ion-icon class="checkmark fill" name="checkmark-circle"></ion-icon>
+						</button>
+
+						<button class="method selected">
+							<ion-icon name="card"></ion-icon>
+							<span>Cash On Delivery</span>
+							<ion-icon class="checkmark fill" name="checkmark-circle"></ion-icon>
+						</button>
+					</div>
+					<form action="/addAddress" method="POST" id="cart">
+					<form action="/addAddress" method="POST" id="cart">
+						<div class="cardholder-name">
+							<label for="cardholder-name"  class="label-default">House Number</label>
+							<input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
+						</div>
+
+						<div class="card-number">
+							<label for="card-number" class="label-default">Street Name</label>
+							<input type="text" name="card-number" id="card-number" class="input-default">
+						</div>
+
+						<div class="input-flex">
+							<div class="expire-date">
+								<label for="expire-date" class="label-default">State & Country</label>
+								<div class="input-flex">
+									<input type="text" name="day" id="expire-date" class="input-default">
+									<input type="text" name="month" id="expire-date2" class="input-default">
+								</div>
+							</div>
+
+							<div class="cvv">
+								<label for="cvv" class="label-default">Pin code</label>
+								<input type="text/number" name="cvv" id="cvv" class="input-default">
+							</div>
+
+						</div>
+						<!-- <button class="btn btn-primary">
+							Place Order
+						</button> -->
+					</form>
+				</div>
+
+
+				<!-- <a href="./order.html"> -->
+					<button id="btn" class="btn btn-primary">
+					Place Order
+				</button>
+			<!-- </a> -->
+
+			</section>
+			<!-- cart -->
+			<section class="cart">
+				<div class="cart-item-box">
+					<h2 class="section-heading">Order Summary</h2>
+					<div class="product-div">
+						<!-- <div class="product-card">
+							<div class="card">
+								<div class="img-box">
+									<img src="../../img/product/product-barracuda.jpeg" alt="fish image" width="80px"
+										class="product-img">
+								</div>
+								<div class="detail">
+									<h4 class="product-name">சீலா - Barracuda</h4>
+									<div class="wrapper">
+										<div class="product-qty">
+											<button id="decrement">
+												<ion-icon name="remove-outline"></ion-icon>
+											</button>
+											<span id="quantity">1</span>
+											<button id="increment">
+												<ion-icon name="add-outline"></ion-icon>
+											</button>
+										</div>
+
+										<div class="price">
+											₹ <span id="price">500</span>
+										</div>
+									</div>
+
+								</div>
+								<button id="product-close-btn">
+									<ion-icon name="close-outline"></ion-icon>
+								</button>
+							</div>
+						</div> -->
+
+						<!-- <div class="product-card">
+							<div class="card">
+								<div class="img-box">
+									<img src="../../img/product/product-sheer.jpeg" alt="fish image" width="80px"
+										class="product-img">
+								</div>
+								<div class="detail">
+									<h4 class="product-name">சீலா - Barracuda</h4>
+									<div class="wrapper">
+										<div class="product-qty">
+											<button id="decrement">
+												<ion-icon name="remove-outline"></ion-icon>
+											</button>
+											<span id="quantity">1</span>
+											<button id="increment">
+												<ion-icon name="add-outline"></ion-icon>
+											</button>
+										</div>
+
+										<div class="price">
+											₹ <span id="price">500</span>
+										</div>
+									</div>
+
+								</div>
+								<button id="product-close-btn">
+									<ion-icon name="close-outline"></ion-icon>
+								</button>
+							</div>
+						</div>
+
+						<div class="product-card">
+							<div class="card">
+								<div class="img-box">
+									<img src="../../img/product/product-sardine.webp" alt="fish image" width="80px"
+										class="product-img">
+								</div>
+								<div class="detail">
+									<h4 class="product-name">சீலா - Barracuda</h4>
+									<div class="wrapper">
+										<div class="product-qty">
+											<button id="decrement">
+												<ion-icon name="remove-outline"></ion-icon>
+											</button>
+											<span id="quantity">1</span>
+											<button id="increment">
+												<ion-icon name="add-outline"></ion-icon>
+											</button>
+										</div>
+
+										<div class="price">
+											₹ <span id="price">500</span>
+										</div>
+									</div>
+
+								</div>
+								<button id="product-close-btn">
+									<ion-icon name="close-outline"></ion-icon>
+								</button>
+							</div>
+
+						</div> -->
+						<!-- <div class="product-card">
+							<div class="card">
+								<div class="img-box">
+									<img src="../../img/product/product-sardine.webp" alt="fish image" width="80px"
+										class="product-img">
+								</div>
+								<div class="detail">
+									<h4 class="product-name">சீலா - Barracuda</h4>
+									<div class="wrapper">
+										<div class="product-qty">
+											<button id="decrement">
+												<ion-icon name="remove-outline"></ion-icon>
+											</button>
+											<span id="quantity">1</span>
+											<button id="increment">
+												<ion-icon name="add-outline"></ion-icon>
+											</button>
+										</div>
+
+										<div class="price">
+											₹ <span id="price">500</span>
+										</div>
+									</div>
+
+								</div>
+								<button id="product-close-btn">
+									<ion-icon name="close-outline"></ion-icon>
+								</button>
+							</div>
+
+						</div> -->
+						<!-- <div class="product-card">
+							<div class="card">
+								<div class="img-box">
+									<img src="../../img/product/product-sardine.webp" alt="fish image" width="80px"
+										class="product-img">
+								</div>
+								<div class="detail">
+									<h4 class="product-name">சீலா - Barracuda</h4>
+									<div class="wrapper">
+										<div class="product-qty">
+											<button id="decrement">
+												<ion-icon name="remove-outline"></ion-icon>
+											</button>
+											<span id="quantity">1</span>
+											<button id="increment">
+												<ion-icon name="add-outline"></ion-icon>
+											</button>
+										</div>
+
+										<div class="price">
+											₹ <span id="price">500</span>
+										</div>
+									</div>
+
+								</div>
+								<button id="product-close-btn">
+									<ion-icon name="close-outline"></ion-icon>
+								</button>
+							</div>
+
+						</div> -->
+						<div id="products-container"></div>
+
+					</div>
+				</div>
+
+				<div class="wrapper">
+
+					<div class="amount">
+						<button class="add-more">+ Add More</button>
+						<div class="subtotal">
+							<span>Subtotal</span>
+							<span>₹ <span id="subtotal"></span></span>
+						</div>
+
+						<div class="tax">
+							<span>Tax</span>
+							<span>₹ <span id="tax">50</span></span>
+						</div>
+
+						<div class="shipping">
+							<span>Shipping</span>
+							<span>₹ <span id="shipping">40</span></span>
+						</div>
+
+						<div class="total">
+							<span>Total</span>
+							<span>₹ <span id="total">590</span></span>
+						</div>
+					</div>
+				</div>
+
+			</section>
+		</div>
+	</main>
+
+
+	<!-- footer -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row footer-row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">About us</h2>
+						<p>Aazhi fishes, sourced from the depths of the Indian Ocean, offer a taste of maritime
+							excellence and culinary delight.ndulge in the rich flavors of Aazhi fishes, prized
+							for their
+							freshness and unique coastal essence, bringing a symphony of sea to your plate</p>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 footer-second-div">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Pages</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="services.html">Shop</a></li>
+							<li><a href="news.html">News</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box subscribe">
+						<h2 class="widget-title">Get in Touch</h2>
+						<ul>
+							<li>No.44/B, Arcot road, nearKodambaakam bridge.</li>
+							<li>Next to HDFC Bank, Chennai-24</li>
+							<li>+91 70922 34564</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+
+
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>, All
+						Rights
+						Reserved.<br>
+						Distributed By - <a href="https://themewagon.com/">Themewagon</a>
+					</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end copyright -->
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+    const email = sessionStorage.getItem('email');
+    console.log(email);
+    
+    if (email) {
+        fetch(`/users?email=${encodeURIComponent(email)}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    console.log(data);
+                    const user = data.user;
+                    console.log(user.id);
+                    sessionStorage.setItem('user_id', user.id);
+                   
+                    const user_id = sessionStorage.getItem('user_id');
+                    console.log(user_id);
+                    if (user_id) {
+                        fetch(`/getorders?user_id=${encodeURIComponent(user_id)}`)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return response.json();
+                            })
+							.then(data => {
+                                if (data.success) {
+                                    const container = document.getElementById('products-container');
+                                    container.innerHTML = ''; // Clear any existing content
+									let sub = 0;
+									document.getElementById('btn').addEventListener('click', function() {
+										if (data.reviews.length === 0) {
+											alert("Add products");
+										} else {
+											alert("Place order successfully");
+										}
+									});
+
+									for (let i = 0; i < data.reviews.length; i++) {
+                                        const productCard = document.createElement('div');
+                                        productCard.classList.add('product-card');
+										sub += data.reviews[i].product_price;
+										let tot = 0; 
+                                        tot +=sub+ 90
+										document.getElementById('subtotal').innerText = sub.toFixed(2);
+										document.getElementById('total').innerText = tot.toFixed(2);
+                                        const price = data.reviews[i].product_price.toFixed(2); // Ensure price is in correct format
+                                        const productImage = data.reviews[i].product_image || "../../img/product/product-sardine.webp"; // Fallback image
+
+                                        productCard.innerHTML = `
+                                            <div class="card">
+                                                <div class="img-box">
+                                                    <img src="${productImage}" alt="fish image" width="80px" class="product-img">
+                                                </div>
+                                                <div class="detail">
+                                                    <h4 class="product-name">${data.reviews[i].product_name}</h4>
+                                                    <div class="wrapper">
+                                                        <div class="product-qty">
+                                                            <button id="decrement">
+                                                                <ion-icon name="remove-outline"></ion-icon>
+                                                            </button>
+                                                            <span id="quantity">${data.reviews[i].product_quantity}</span>
+                                                            <button id="increment">
+                                                                <ion-icon name="add-outline"></ion-icon>
+                                                            </button>
+                                                        </div>
+                                                        <div class="price">
+                                                            ₹ <span id="price">${data.reviews[i].product_price}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="product-close-btn" data-order-id="${data.reviews[i].id}">
+                                                    <ion-icon name="close-outline"></ion-icon>
+                                                </button>
+                                            </div>
+                                        `;
+
+                                        container.appendChild(productCard);
+                                    };
+									document.querySelectorAll('.product-close-btn').forEach(button => {
+                                        button.addEventListener('click', function() {
+                                            const id = this.getAttribute('data-order-id');
+                                            fetch(`/deleteorder?id=${encodeURIComponent(id)}`, {
+                                                method: 'DELETE'
+                                            })
+                                            .then(response => {
+                                                if (!response.ok) {
+                                                    throw new Error('Network response was not ok');
+                                                }
+                                                return response.json();
+                                            })
+                                            .then(data => {
+                                                if (data.success) {
+                                                    // Remove the product card from the DOM
+                                                    this.closest('.product-card').remove();
+                                                } else {
+                                                    alert('Error: ' + data.error);
+                                                }
+                                            })
+                                            .catch(error => {
+                                                console.error('Error:', error);
+                                                alert('An error occurred while deleting the order. Please try again.');
+                                            });
+                                        });
+                                    });
+                                } else {
+                                    alert('Error: ' + data.error);
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                alert('An error occurred while fetching order data. Please try again.');
+                            });
+                    } else {
+                        alert('User ID not found in sessionStorage.');
+                    }
+                } else {
+                    alert('Error: ' + data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while fetching user data. Please try again.');
+            });
+    } else {
+        alert('Email not found in sessionStorage.');
+    }
+});
+
+
+document.getElementById("btn").addEventListener("click", function() {
+
+
+  const house_number = document.getElementById("cardholder-name").value.trim();
+  const street_name = document.getElementById("card-number").value.trim();
+  const state = document.getElementById("expire-date").value.trim();
+  const country = document.getElementById("expire-date2").value.trim();
+  const pin_code  = document.getElementById("cvv").value.trim();
+  const id = sessionStorage.getItem('user_id');
+  console.log(id);
+  const user = {
+	house_number:house_number,
+	street_name:street_name,
+	state:state,
+	country:country,
+	pin_code:pin_code,
+	user_id:id
+  };
+console.log(user);
+  fetch('/addAddress', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(user)
+  })
+  .then(response => {
+      if (!response.ok) {
+          throw new Error('Network response was not ok');
+      }
+      return response.json();
+  })
+  .then(data => {
+      if (data.success) {
+        //   alert('Address data inserted successfully');
+        //   window.location.href = 'assets/pages/homepage/login.html'; 
+      } else {
+          alert('Error: ' + data.error);
+      }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  });
+
+});
+             
+</script>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+	<script src="../../js/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="../../bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="../../js/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="../../js/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="../../js/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="../../js/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="../../js/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="../../js/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="../../js/sticker.js"></script>
+	<!-- main js -->
+	<script src="../../js/main.js"></script>
+	<script src="../../js/vendor/jquery.nice-select.min.js"></script>
+	<!-- main js -->
+	<script src="../../js/profile/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"
+		content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+
+	<!-- title -->
+	<title>Shop</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="../../css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="../../css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="../../css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="../../css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="../../css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/product/shop.css">
+	<!-- responsive -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="../../css/scss/vendor/nice-select.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../../css/homepage/style.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="../../css/responsive.css">
+
+    <link rel="stylesheet" href="../../css/flaticon.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+	<link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="../../../index.html">
+								<img src="../../img/logo.jpg" alt="">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li class="current-list-item"><a href="index">Home</a></li>
+								<li><a href="../homepage/about.html">About</a></li>
+								<li><a href="shop.html">Shop</a></li>
+								<li><a href="./order.html">Order</a></li>
+								<li><a href="../homepage/contact.html">Contact</a></li>
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart" href="./cart.html"><i
+												class="fas fa-shopping-cart"></i></a>
+										<a href="../homepage/login.html"><button class="login-btn">Login</button></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Fresh and Organic</p>
+						<h1>Shop</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	 <!--== Start Shop Top Bar Area Wrapper ==-->
+	 <div class="shop-top-bar-area">
+		<div class="container">
+			<div class="shop-top-bar">
+				<select class="select-shoing" id="shopping" onchange="onChange()">
+					<option data-display="Trending">Trending</option>
+					<option value="1">Featured</option>
+					<option value="2">Best Selling</option>
+					<option value="3">Alphabetically, A-Z</option>
+					<option value="4">Alphabetically, Z-A</option>
+					<option value="5">Price, low to high</option>
+					<option value="6">Price, high to low</option>
+					<option value="7">Quantity, less to high</option>
+					<option value="8">Quantity, high to less</option>
+				</select>
+
+				<div class="select-on-sale d-flex d-md-none">
+					<span>On Sale :</span>
+					<select class="select-on-sale-form">
+						<option selected>Yes</option>
+						<option value="1">No</option>
+					</select>
+				</div>
+
+				<div class="select-on-sale d-none d-md-flex">
+					<span>On Sale :</span>
+					<select class="select-on-sale-form">
+						<option selected>Yes</option>
+						<option value="1">No</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--== End Shop Top Bar Area Wrapper ==-->
+
+	<!--categories list section-->
+	<section class="section-space pb-0">
+		<div class="container">
+			<div class="row g-3 g-sm-6" id="catgories-fish">
+				<div class="col-6 col-lg-4 col-lg-2 col-xl-2 mt-lg-0 mt-sm-6 mt-4">
+					<a href="./pages/product/product.html" class="product-category-item">
+						<img class="icon" src="../../img/index/category1.png" width="70" height="80"
+							alt="Image-HasTech">
+						<h3 class="title">All Fishes</h3>
+					</a>
+				</div>
+				<div class="col-6 col-lg-4 col-lg-2 col-xl-2 mt-lg-0 mt-sm-6 mt-4">
+					<a href="./pages/product/product.html" class="product-category-item" data-bg-color="#FFEDB4">
+						<img class="icon" src="../../img/index/category2.png" width="80" height="80"
+							alt="Image-HasTech">
+						<h3 class="title">Sea Fishes</h3>
+					</a>
+				</div>
+				<div class="col-6 col-lg-4 col-lg-2 col-xl-2 mt-lg-0 mt-sm-6 mt-4">
+					<a href="./pages/product/product.html" class="product-category-item" data-bg-color="#DFE4FF">
+						<img class="icon" src="../../img/index/category3.png" width="80" height="80"
+							alt="Image-HasTech">
+						<h3 class="title">Shell Fishes</h3>
+					</a>
+				</div>
+				<div class="col-6 col-lg-4 col-lg-2 col-xl-2 mt-xl-0 mt-sm-6 mt-4">
+					<a href="./pages/product/product.html" class="product-category-item" data-bg-color="#FFEACC">
+						<img class="icon" src="../../img/index/category4.png" width="80" height="80"
+							alt="Image-HasTech">
+						<h3 class="title">Dry Fishes</h3>
+						<span data-bg-color="#835BF4" class="flag-new">sale</span>
+					</a>
+				</div>
+				<div class="col-6 col-lg-4 col-lg-2 col-xl-2 mt-xl-0 mt-sm-6 mt-4" id="last-category">
+					<a href="./pages/product/product.html" class="product-category-item" data-bg-color="#FFF3DA">
+						<img class="icon" src="../../img/index/category6.png" width="80" height="80"
+							alt="Image-HasTech">
+						<h3 class="title">Uncategorized</h3>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+ <!--categories list section end -->
+	
+
+ <section class="section-space" style="margin-top: 80px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title text-center">
+					<h2 class="title">Top sale</h2>
+					<p>Fall in love with Zyla's Cosmetic Products</p>
+				</div>
+			</div>
+		</div>
+		<div class="row mb-n4 mb-sm-n10 g-3 g-sm-6" id="all-products">
+			
+<!-- 
+			<div class="col-6 col-lg-4 mb-4 mb-sm-9" id="single-product">
+				<div class="product-item product-st2-item">
+					<div class="product-thumb">
+						<a class="d-block" href="#">
+							<img src="../../img/product/product-barracuda.jpeg" class="img_src" width="370" height="450" alt="Image-HasTech">
+						</a>
+					</div>
+					<div class="product-info">
+						<div class="product-rating">
+							<div class="rating">
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<div class="reviews">10 quantities</div>
+						</div>
+						<h4 class="title"><a href="./single-product.html">சீலா [English: Barracuda]</a></h4>
+						<div class="prices">
+							<span class="price">₹ 500</span>
+							<span class="price-old">₹ 450</span>
+	
+						</div>
+						<div class="product-action">
+							<button type="button" class="product-action-btn action-btn-cart" id="btn-cart">
+								<span>Add to cart</span>
+							</button>
+							<a href="">
+							<button type="button" class="product-action-btn action-btn-quick-view">
+								<i class="fa fa-expand"></i>
+							</button>
+							</a>
+						</div>
+					   
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-lg-4 mb-4 mb-sm-9" id="single-product">
+				<div class="product-item product-st2-item">
+					<div class="product-thumb">
+						<a class="d-block" href="#">
+							<img src="../../img/product/product-barracuda.jpeg" class="img_src" width="370" height="450" alt="Image-HasTech">
+						</a>
+					</div>
+					<div class="product-info">
+						<div class="product-rating">
+							<div class="rating">
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<div class="reviews">10 quantities</div>
+						</div>
+						<h4 class="title"><a href="./single-product.html">சீலா [English: Barracuda]</a></h4>
+						<div class="prices">
+							<span class="price">₹ 500</span>
+							<span class="price-old">₹ 450</span>
+	
+						</div>
+						<div class="product-action">
+							<button type="button" class="product-action-btn action-btn-cart" id="btn-cart">
+								<span>Add to cart</span>
+							</button>
+							<a href="">
+							<button type="button" class="product-action-btn action-btn-quick-view">
+								<i class="fa fa-expand"></i>
+							</button>
+							</a>
+						</div>
+					   
+					</div>
+				</div>
+			</div> -->
+			<div class="container" id="products-container">
+				<!-- Products will be inserted here -->
+			  </div>
+			<!-- <div class="col-6 col-lg-4 mb-4 mb-sm-9" id="single-product">
+				<div class="product-item product-st2-item">
+					<div class="product-thumb">
+						<a class="d-block" href="#">
+							<img src="../../img/product/product-barracuda.jpeg" class="img_src" width="370" height="450" alt="Image-HasTech">
+						</a>
+					</div>
+					<div class="product-info">
+						<div class="product-rating">
+							<div class="rating">
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<div class="reviews">10 quantities</div>
+						</div>
+						<h4 class="title"><a href="./single-product.html">சீலா [English: Barracuda]</a></h4>
+						<div class="prices">
+							<span class="price">₹ 500</span>
+							<span class="price-old">₹ 450</span>
+	
+						</div>
+						<div class="product-action">
+							<button type="button" class="product-action-btn action-btn-cart" id="btn-cart">
+								<span>Add to cart</span>
+							</button>
+							<a href="">
+							<button type="button" class="product-action-btn action-btn-quick-view">
+								<i class="fa fa-expand"></i>
+							</button>
+							</a>
+						</div>
+					   
+					</div>
+				</div>
+			</div> -->
+
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="pagination-wrap">
+						<ul>
+							<li><a href="#">Prev</a></li>
+							<li><a href="#">1</a></li>
+							<li><a class="active" href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">Next</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+	<!-- footer -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row footer-row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">About us</h2>
+						<p>Aazhi fishes, sourced from the depths of the Indian Ocean, offer a taste of maritime
+							excellence and culinary delight.ndulge in the rich flavors of Aazhi fishes, prized for their
+							freshness and unique coastal essence, bringing a symphony of sea to your plate</p>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 footer-second-div">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Pages</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="services.html">Shop</a></li>
+							<li><a href="news.html">News</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box subscribe">
+						<h2 class="widget-title">Get in Touch</h2>
+						<ul>
+							<li>No.44/B, Arcot road, nearKodambaakam bridge.</li>
+							<li>Next to HDFC Bank, Chennai-24</li>
+							<li>+91 70922 34564</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>, All Rights
+						Reserved.<br>
+						Distributed By - <a href="https://themewagon.com/">Themewagon</a>
+					</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end copyright -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			const email = sessionStorage.getItem('email');
+			console.log(email);
+			
+			if (email) {
+				fetch(`/users?email=${encodeURIComponent(email)}`)
+					.then(response => {
+						if (!response.ok) {
+							throw new Error('Network response was not ok');
+						}
+						return response.json();
+					})
+					.then(data => {
+						if (data.success) {
+							console.log(data);
+							const user = data.user;
+							console.log(user.id);
+							sessionStorage.setItem('user_id', user.id);
+						   
+							const user_id = sessionStorage.getItem('user_id');
+							console.log(user_id);
+							if (user_id) {
+								fetch(`/address?user_id=${encodeURIComponent(user_id)}`)
+									.then(response => {
+										if (!response.ok) {
+											throw new Error('Network response was not ok');
+										}
+										return response.json();
+									})
+									.then(data => {
+										if (data.success) {
+											console.log(data.address.id);
+											sessionStorage.setItem('address_id', data.address.id);
+										} else {
+											alert('Error: ' + data.error);
+										}
+									})
+									.catch(error => {
+										console.error('Error:', error);
+										alert('An error occurred while fetching address data. Please try again.');
+									});
+							} else {
+								alert('User ID not found in sessionStorage.');
+							}
+						} else {
+							alert('Error: ' + data.error);
+						}
+					})
+					.catch(error => {
+						console.error('Error:', error);
+						alert('An error occurred while fetching user data. Please try again.');
+					});
+			} else {
+				alert('Email not found in sessionStorage.');
+			}
+		
+			fetch('/product', {
+				method: 'GET'
+			})
+			.then(response => {
+				if (!response.ok) {
+					throw new Error('Network response was not ok');
+				}
+				return response.json();
+			})
+			.then(data => {
+				if (data.success) {
+    console.log(data.products);
+
+    const container = document.getElementById('products-container');
+
+    for (let i = 0; i < data.products.length; i++) {
+        const productDiv = document.createElement('div');
+        const discountedPrice = data.products[i].actual_price * (1 - data.products[i].discount / 100);
+
+        productDiv.classList.add('col-6', 'col-lg-4', 'mb-4', 'mb-sm-9');
+
+        // Check if data.products[i] exists before accessing its properties
+        if (data.products[i]) {
+            productDiv.innerHTML = `
+                <div class="product-item product-st2-item">
+                    <div class="product-thumb">
+                        <a class="d-block" href="#">
+                            <img src="data:image/jpeg;base64,${data.products[i].image_data}" class="img_src" width="370" height="450" alt="${data.products[i].product_name_tamil}">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-rating">
+                            <div class="rating">
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div>
+                            <div class="reviews">${data.products[i].pieces} quantities</div>
+                        </div>
+                        <h4 class="title"><a href="./single-product.html">${data.products[i].product_name_english}</a></h4>
+                        <div class="prices">
+                            <span class="price">₹${discountedPrice.toFixed(2)}</span>
+                            <span class="price-old">₹${data.products[i].actual_price}</span>
+                        </div>
+                        <div class="product-action">
+                            <button type="button" class="product-action-btn action-btn-cart" data-product-id="${data.products[i].id}"  data-product-quantity="${data.products[i].pieces}"
+							data-image="${data.products[i].image_data}" data-product-name="${data.products[i].product_name_english}"  data-product-price="${discountedPrice.toFixed(2)}">
+                                <span>Add to cart</span>
+                            </button>
+                            <a href="./single-product.html?product_id=${data.products[i].id}">
+                                <button type="button" class="product-action-btn action-btn-quick-view" >
+                                    <i class="fa fa-expand"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        } else {
+            console.error(`Error: data.products[${i}] is undefined.`);
+        }
+
+        container.appendChild(productDiv);
+    }
+
+    // Add event listeners to the buttons after appending them to the DOM
+    const cartButtons = document.querySelectorAll('.action-btn-cart');
+    cartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const productId = this.getAttribute('data-product-id');
+            console.log('Adding product to cart:', productId);
+            let user_id = sessionStorage.getItem('user_id');
+            let status = "no";
+            let product_id = this.getAttribute('data-product-id');
+            let product_quantity = this.getAttribute('data-product-quantity');
+            let product_price = this.getAttribute('data-product-price');
+			let product_name = this.getAttribute('data-product-name');
+			let image_data = null;
+            let address_id = sessionStorage.getItem('address_id');
+            let user = { user_id, status, product_id, product_quantity, product_price,product_name,image_data,address_id };
+
+            fetch(`/order`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(user)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    alert('Product added to cart successfully!');
+                } else {
+                    alert('Error: ' + data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while adding product to cart. Please try again.');
+            });
+        });
+    });
+}
+else {
+					console.error('Error: ' + data.error);
+				}
+			})
+			.catch(error => {    
+				console.error('Fetch error:', error);
+			});
+
+			$('.pagination .page-link').on('click', function(e) {
+                e.preventDefault();
+                var pageNumber = $(this).text();
+                fetchProducts(pageNumber);
+            });
+		});
+		</script>
+		
+		
+	  
+	<!-- jquery -->
+	<script src="../../js/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="../../bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="../../js/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="../../js/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="../../js/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="../../js/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="../../js/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="../../js/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="../../js/sticker.js"></script>
+	<!-- main js -->
+	<script src="../../js/main.js"></script>
+	<script src="../../js/vendor/jquery.nice-select.min.js"></script>
+	<!-- main js -->
+	<script src="../../js/profile/index.js"></script>
+</body>
+
+</html>

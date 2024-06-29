@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/homepage/login.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+
+        <title>login</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../img/logo.jpg" alt=""></a>
+            <div class="container-form" style="top: 50px">
+                <div class="x-mark">
+                    <a href="../../../index.html">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+                <form action="/login" method="POST" id="login">
+
+                    <h2> login </h2>
+
+                    <div>
+                        <label class="label_field">Email Address / Mobile Number</label>
+                        <br >
+                        <input class="input_field" type="text" id="emailOrMobile" required="true"
+                        placeholder="E.g. helloMarion@gmail.com or 1234567890">
+                    </div>
+
+                    <div>
+                        <label class="label_field">Password</label>
+                        <a class="forgotpassword" href="../homepage/forgot_password.html">forgot password?</a> <br />
+                        <input class="input_field" id="password" type="password" required="true" maxlength="6" placeholder="Password" value="978985">
+                        <i id="togglePassword" class="fa-solid fa-eye"></i>
+                        <small></small>
+                    </div>
+
+                    <div>
+                       <a href="./profile.html"> <button onclick="validateInput()" type="submit">Login</button></a>
+                    </div>
+
+                    <div>
+                        <span>New to Aazhi Fishes?</span>
+                        <a href="./signup.html">Create New Account</a>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+        <script>
+            document.querySelector("#togglePassword").addEventListener("click", showpsw);
+        
+            function showpsw() {
+              if (document.querySelector("#password").type === "password") {
+                document.querySelector("#password").type = "text";
+              } else {
+                document.querySelector("#password").type = "password";
+              }
+            }
+            
+        function validateInput() {
+            const inputField = document.getElementById('emailOrMobile');
+            const inputValue = inputField.value.trim();
+
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const mobileRegex = /^\d{10}$/;
+
+            if(!emailRegex.test(inputValue) && !mobileRegex.test(inputValue)){
+                alert('Invalid input. Please enter a valid email address or a 10-digit mobile number.');
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+  
+  function  login(event) {
+    event.preventDefault();
+
+    
+    const email = document.getElementById("emailOrMobile").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+  
+    const credentials = {
+      email: email,
+      password: password
+    };
+
+    
+    fetch('/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(credentials)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.success) {
+            
+            alert('Login successful!');
+            sessionStorage.setItem('email', email);
+            window.location.href = 'http://localhost:3000/index'; 
+        } else {
+            alert('Error: ' + data.error);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+    });
+  }
+
+  
+  document.getElementById("login").addEventListener("submit", login);
+});
+
+        </script>
+        <script src="../../js/profile/signup.js"></script>
+
+    </body>
+
+</html>

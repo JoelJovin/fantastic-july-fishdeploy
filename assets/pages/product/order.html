@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+	<link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/product/order.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fuzzy+Bubbles:wght@400;700&family=Lemonada:wght@300&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<!-- favicon -->
+<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+<!-- google font -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+<!-- fontawesome -->
+<link rel="stylesheet" href="../../css/all.min.css">
+<!-- bootstrap -->
+<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+<!-- owl carousel -->
+<link rel="stylesheet" href="../../css/owl.carousel.css">
+<!-- magnific popup -->
+<link rel="stylesheet" href="../../css/magnific-popup.css">
+<!-- animate css -->
+<link rel="stylesheet" href="../../css/animate.css">
+<!-- mean menu css -->
+<link rel="stylesheet" href="../../css/meanmenu.min.css">
+<!-- main style -->
+<link rel="stylesheet" href="../../css/main.css">
+<link rel="stylesheet" href="../../css/product/shop.css">
+<!-- responsive -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="../../css/scss/vendor/nice-select.css">
+<!-- main style -->
+<link rel="stylesheet" href="../../css/homepage/style.css">
+<!-- responsive -->
+<link rel="stylesheet" href="../../css/responsive.css">
+
+<link rel="stylesheet" href="../../css/flaticon.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="../../../index.html">
+								<img src="../../img/logo.jpg" alt="">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li class="current-list-item"><a href="../../../index.html">Home</a></li>
+								<li><a href="../homepage/about.html">About</a></li>
+								<li><a href="shop.html">Shop</a></li>
+								<li><a href="./order.html">Order</a></li>
+								<li><a href="../homepage/contact.html">Contact</a></li>
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart" href="./cart.html"><i
+												class="fas fa-shopping-cart"></i></a>
+										<a href="../homepage/login.html"><button class="login-btn">Login</button></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+
+	<div id="whole-div">
+		<!-- tab-header -->
+		<div id="tab">
+		  <div>
+			<span>Orders</span>
+			<span id="order-no">(4)</span>
+		  </div>
+		</div>
+		<!-- end tab-header -->
+	
+		<div class="tbl-header">
+			<table cellpadding="0" cellspacing="0" border="0">
+			  <thead>
+				<tr>
+				  <th>Order ID</th>
+				  <th>Products List</th>
+				  <th>Order Summary</th>
+				</tr>
+			  </thead>
+			</table>
+		</div>
+		<div class="tbl-content-main" id="products-container">
+			<table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    <!-- Product cards will be dynamically added here -->
+                </tbody>
+            </table>
+		</div>
+	</div>
+	
+<script>
+	        document.addEventListener("DOMContentLoaded", function() {
+            const email = sessionStorage.getItem('email');
+            console.log(email);
+
+            if (email) {
+                fetch(`/users?email=${encodeURIComponent(email)}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (data.success) {
+                            console.log(data);
+                            const user = data.user;
+                            console.log(user.id);
+                            sessionStorage.setItem('user_id', user.id);
+
+                            const user_id = sessionStorage.getItem('user_id');
+                            console.log(user_id);
+                            if (user_id) {
+                                fetch(`/getorders?user_id=${encodeURIComponent(user_id)}`)
+                                    .then(response => {
+                                        if (!response.ok) {
+                                            throw new Error('Network response was not ok');
+                                        }
+                                        return response.json();
+                                    })
+                                    .then(data => {
+                                        if (data.success) {
+                                            const tbody = document.querySelector('.tbl-content-main tbody');
+                                            tbody.innerHTML = ''; // Clear any existing content
+                                            let sub = 0;
+                                            let tot = 0;
+                                            for (let i = 0; i < data.reviews.length; i++) {
+                                                const review = data.reviews[i];
+                                                sub += review.product_price;
+                                                tot += sub + 90;
+
+                                                const row = document.createElement('tr');
+                                                row.innerHTML = `
+                                                    <td>${review.id}</td>
+                                                    <td>${review.product_id}</td>
+                                                    <td>${review.product_quantity}</td>
+                                                    <td>${review.product_price.toFixed(2)}</td>
+                                                `;
+                                                tbody.appendChild(row);
+                                            }
+
+                                            // Update subtotal and total
+                                            document.getElementById('subtotal').innerText = sub.toFixed(2);
+                                            document.getElementById('total').innerText = tot.toFixed(2);
+
+                                        } else {
+                                            alert('Error: ' + data.error);
+                                        }
+                                    })
+                                    .catch(error => {
+                                        console.error('Error:', error);
+                                        alert('An error occurred while fetching order data. Please try again.');
+                                    });
+                            } else {
+                                alert('User ID not found in sessionStorage.');
+                            }
+                        } else {
+                            alert('Error: ' + data.error);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('An error occurred while fetching user data. Please try again.');
+                    });
+            } else {
+                alert('Email not found in sessionStorage.');
+            }
+        });
+
+</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../js/product/order.js"></script>
+		<!-- jquery -->
+		<script src="../../js/jquery-1.11.3.min.js"></script>
+		<!-- bootstrap -->
+		<script src="../../bootstrap/js/bootstrap.min.js"></script>
+		<!-- count down -->
+		<script src="../../js/jquery.countdown.js"></script>
+		<!-- isotope -->
+		<script src="../../js/jquery.isotope-3.0.6.min.js"></script>
+		<!-- waypoints -->
+		<script src="../../js/waypoints.js"></script>
+		<!-- owl carousel -->
+		<script src="../../js/owl.carousel.min.js"></script>
+		<!-- magnific popup -->
+		<script src="../../js/jquery.magnific-popup.min.js"></script>
+		<!-- mean menu -->
+		<script src="../../js/jquery.meanmenu.min.js"></script>
+		<!-- sticker js -->
+		<script src="../../js/sticker.js"></script>
+		<!-- main js -->
+		<script src="../../js/main.js"></script>
+		<script src="../../js/vendor/jquery.nice-select.min.js"></script>
+		<!-- main js -->
+		<script src="../../js/profile/index.js"></script>
+</body>
+
+</html>

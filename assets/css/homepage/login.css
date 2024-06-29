@@ -1,0 +1,210 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    font-family: 'Jost', sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow: 6px #000;
+}
+img {
+    width: 100px;
+    position: absolute;
+    bottom: 87%;
+    height:100px;
+    top:85px;
+    left: 650px
+}
+
+@media (max-width: 480px) {
+    img {
+        left: 150px;
+    }
+}
+
+.container-form{
+    position:relative;
+    font-family: 'Jost', sans-serif;
+    width:30%;
+    max-height: 78%;
+    padding:2%;
+    background-color: white;
+    border:2px solid #eee;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+div.x-mark i{
+    color:#555;
+    float:right;
+    font-size:25px;
+    position: absolute;
+    top:3%;
+    right:4%;
+}
+.container-form h2{
+    font-weight: 500;
+    padding-top: 2%;
+    padding-bottom:6%;  
+    text-transform: capitalize;
+    font-size: 30px;
+    color: #079b7d;
+}
+
+.container-form .label_field{
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom:2%;
+}
+
+.container-form .input_field{
+    padding:2%;
+}
+
+a.forgotpassword{
+    color: #000;
+    font-family: 'Jost', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    margin-left: 5rem;
+}
+.container-form .input_field{
+    font-family: 'Jost', sans-serif;
+    width:100%;
+    height:30px;
+    border:1px solid #5a5a5a;
+    margin-top: 1%;
+}
+.cancel_btn{
+    margin-top:4px;
+} 
+.container_form div{
+    padding-bottom: 3%;
+}
+
+.container-form  button{
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    width:100%;
+    background-color: #16002F;
+    background-image: linear-gradient(45deg, #16002F, #00A584, #2473B8);
+    color: #fff;
+    padding:2%;
+    border:none;
+    border-radius: 5px;
+    letter-spacing: 2px;
+}
+
+.container-form div:last-child{
+    font-family: 'Jost', sans-serif;
+    width:100%;
+    padding-top: 1em;
+}
+
+.container-form div:last-child span{
+    font-size: 18px;
+    margin-right: 4px;
+}
+
+.container-form div:last-child a{ 
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+}
+
+.container-form div:last-child a:hover {
+    color: #00A584;
+}
+
+.container-form #togglePassword{
+    position:relative;
+    font-size: 14px;
+    color:grey;
+    bottom:28px;
+    left:12rem;
+    margin-left: 100px;
+}
+
+@media (max-width: 480px) {
+    .container-form #togglePassword {
+        margin-left: 10px;
+    }
+}
+
+@media(max-width:360px) {
+    .container-form {
+        width: 80%;
+        margin-top: 3rem;
+    }
+
+    .container-form #togglePassword {
+        left: 18rem;
+    }
+    a.forgot-password{
+        margin-left:7rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .container-form {
+       width: 400px;
+    }
+
+    .container-form #togglePassword {
+        left: 18rem;
+    }
+    a.forgot-password{
+        margin-left:7rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .conatiner{
+        padding: 0px 20px;
+    }
+    .container-form #togglePassword{
+        left:20rem;
+    }
+    img{
+        top:100px;
+    }
+    .container-form {
+        padding: 15px; 
+       margin: 0px 20px;
+       /* height:52%; */
+    }
+
+    .container-form .input_field,
+    .container-form #togglePassword {
+        font-size: 14px; /* Decrease font size for inputs and icon */
+    }
+
+    .container-form #togglePassword {
+        left: 16rem;
+    }
+   
+    .container button {
+        font-size: 14px; /* Decrease button font size */
+    }
+
+    .container div:last-child span {
+        font-size: 14px; /* Decrease font size for text */
+    }
+    a.forgot-password{
+        margin-left:7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-form div:last-child a:hover {
+        color: #00A584;
+    }
+}

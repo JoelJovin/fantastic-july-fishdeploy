@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+main{
+    padding-top:100px;
+    display: block !important;
+}
+
+.footer-area{
+    margin-top:-100px;
+}
+.header-profile {
+    margin-top: 2%;
+    font-family: 'Jost', sans-serif;
+    width: 78vw;
+    position: relative;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 2%;
+    margin-left: 10%;
+}
+
+.header-profile h2 {
+    position: absolute;
+    margin-left: 2%;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 1.8rem;
+}
+
+.header-profile span {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.header-profile a {
+    text-decoration: none;
+    color: #555;
+}
+
+.account {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* width: 100vw; */
+    height: 100vh;
+}
+
+/* address style */
+
+.account div.addressbook {
+
+    text-transform: capitalize;
+    background-color: #6e6c66;
+    background-image: linear-gradient(45deg, #8f8f82, #323225);
+    width: 28%;
+    height: 69%;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    padding: 25px;
+    color: white;
+
+}
+
+.address_details {
+    width: 100%;
+    color: white;
+    background: transparent;
+    border: 1px solid;
+    padding: 10px;
+}
+
+
+.status.default {
+    display: block;
+    color: black;
+    background-color: #eee;
+    padding: 1px 8px;
+    font-size: 12px;
+    border-radius: 30px;
+    position: relative;
+    top: 0px;
+    float: right;
+}
+
+.status {
+    display: none;
+}
+
+.add.btn {
+    background: white;
+    margin-top: 18px;
+    border: 1px solid #555;
+    /* background-color: #555; */
+}
+
+.add.btn i {
+    font-weight: 400;
+}
+
+.add.btn:hover {
+    color: black;
+    margin-top: 18px;
+    border: 1px solid #555;
+    font-weight: 500;
+}
+
+.address_title {
+    font-weight: 700;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.address_details {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.heading h5 {
+    margin-bottom: 6% !important;
+    color: #fff;
+}
+
+
+.mobilenumber {
+    padding: 10px 1px;
+    font-size: 14px;
+}
+
+.buttons {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: 1px solid #eee;
+    width: 100%;
+}
+
+.buttons .remove_address {
+    border-left: 1px solid #eee;
+    width: 50%;
+    text-align: center;
+}
+
+.buttons .remove_address:hover {
+    border-left: 1px solid #eee;
+    width: 50%;
+    text-align: center;
+    /* color:#555; */
+    font-weight: 600;
+}
+
+.buttons .edit_address {
+    width: 50%;
+    text-align: center;
+}
+
+
+.buttons .edit_address:hover {
+    width: 50%;
+    text-align: center;
+    /* color:#555; */
+    font-weight: 600;
+}
+
+
+.profile_details {
+    font-family: 'Jost', sans-serif;
+    width: 50%;
+    height: 100%;
+}
+
+.profile_details div.heading {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 3%;
+}
+
+.profile_details div.heading h3 {
+    margin-left: 1%;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.profile_details_table {
+    padding-top: 8%;
+    font-size: 18px;
+    border: 2px solid #eee;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 8%;
+    height: 69%;
+}
+
+table tbody tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+table tbody tr td {
+    width: 100%;
+    height: 90%;
+    padding: 30px 0px;
+}
+
+
+.profile_details_table table {
+    padding-top: 40px;
+}
+
+.profile_details button {
+    width: 100%;
+    padding: 10px 40px;
+    background-color: #6e6c66;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+.profile_details button:hover {
+    width: 100%;
+    padding: 10px 40px;
+    background-color: #5e1313;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+}
+
+
+.header-profile {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.line {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 4%;
+}
+
+
+div.seller {
+    font-family: 'Jost', sans-serif;
+    border: 2px solid #eee;
+    text-align: center;
+    padding: 2%;
+    background-color: #eee;
+    margin-bottom: 0;
+    border-bottom: 1px solid #fff;
+}
+
+div.seller h2 {
+    font-family: 'Jost', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 1%;
+}
+
+div.seller button {
+    margin-top: 1%;
+    color: #fff;
+    background-color: #222;
+    border: none;
+    width: 15%;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+
+#mobile-header {
+    display: none;
+}
+
+.popup {
+    visibility: hidden;
+    position: absolute;
+    top: 5%;
+    height: 50%;
+}
+
+.popup.open_popup {
+    visibility: visible;
+    position: absolute;
+    top: 5%;
+    height: 50%;
+}
+
+.createdAddress {
+    overflow-y: scroll;
+}
+
+
+.createdAddress::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+@media(max-width:360px) {
+
+    .account {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 0;
+    }
+
+    .profile_details {
+        font-family: 'Jost', sans-serif;
+        width: 100%;
+    }
+
+    table tbody tr td {
+        width: 40%;
+        padding-bottom: 5%;
+        padding-right: 0;
+    }
+
+
+    .profile_details_table {
+        width: 100%;
+        padding-top: 8%;
+        font-size: 18px;
+        border: 2px solid #eee;
+        padding-left: 7%;
+        padding-right: 7%;
+        padding-bottom: 8%;
+    }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-profile h2 {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .account {
+        padding: 10px;
+    }
+
+    .profile_details_table {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Jost', sans-serif;
+    }
+
+    .header-profile h2 {
+        margin-left: 2%;
+        text-transform: capitalize;
+    }
+
+    .header-profile span {
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .header-profile a {
+        text-decoration: none;
+        color: #555;
+    }
+
+    .account {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 20px;
+    }
+
+
+    .account div.addressbook {
+        width: 100%;
+        background-color: #6e6c66;
+        background-image: linear-gradient(45deg, #8f8f82, #323225);
+        padding: 15px;
+        max-height: 520px;
+        overflow-y: scroll;
+        color: white;
+    }
+
+    .logout-div {
+        margin-top: 10px;
+    }
+
+    .add.btn {
+        margin-top: 18px;
+        background: white;
+        border: 1px solid #555;
+    }
+
+    .address_title {
+        font-weight: 700;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .address_details {
+        margin-bottom: 15px;
+    }
+
+    /* Profile details */
+    .profile_details {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .account {
+        height: auto;
+    }
+
+    .profile_details {
+        font-size: 14px;
+    }
+
+    table tbody tr td {
+        width: 50%;
+    }
+
+    .profile_details_table {
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+    }
+}

@@ -1,0 +1,500 @@
+:root {
+  --onyx: hsl(0, 0%, 25%);
+  --azure: hsl(219, 77%, 60%);
+  --white: hsl(0, 0%, 100%);
+  --platinum: hsl(0, 5%, 87%);
+  --gainsboro: hsl(0, 0, 90%);
+  --red-salsa: hsl(0, 0, 60%);
+  --dim-gray: hsl(0, 0%, 39%);
+  --davys-gray: hsl(0, 0%, 30%);
+  --spanish-gray: hsl(0, 0%, 62%);
+  --quick-silver: hsl(0, 0%, 64%);
+
+  --px: 60px;
+  --radius: 5px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+ion-icon,
+span {
+  display: inline-block;
+}
+
+label,
+img {
+  display: block;
+}
+
+input {
+  font: inherit;
+  width: 100%;
+  border: none;
+}
+
+input:focus {
+  outline: 2px solid var(--azure);
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 80%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(0, 0%, 80%);
+}
+
+.container-cart {
+  padding-top: 80px;
+  max-width: 14440px;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--onyx);
+  border-bottom: 1px solid var(--gainsboro);
+  padding: 40px 20px 0px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.heading ion-icon {
+  font-size: 40px;
+}
+
+.item-flex {
+  display: flex;
+  flex-grow: 1;
+}
+
+.checkout {
+  width: 70%;
+  padding: 40px var(--px);
+  background-color: var(--white);
+  border-right: 1px solid var(--gainsboro);
+}
+
+.section-heading {
+  color: var(--onyx);
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.payment-form {
+  margin-bottom: 40px;
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.payment-method .method {
+  border: 1px solid var(--quick-silver);
+  border-radius: var(--radius);
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.product-div {
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.payment-method .selected {
+  border-radius: var(--azure);
+}
+
+.payment-method .method ion-icon {
+  font-size: 20px;
+}
+
+.payment-method .method .checkmark {
+  margin-left: auto;
+  color: var(--quick-silver);
+}
+
+.payment-method .method .fill {
+  color: var(--azure);
+}
+
+.label-default {
+  padding-left: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: var(--onyx);
+}
+
+.input-default {
+  background: var(--platinum);
+  border-radius: var(--radius);
+  color: var(--davys-gray);
+}
+
+.payment-form input {
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cardholder-name,
+.card-number {
+  margin-bottom: 20px;
+}
+
+.card-number input,
+.cvv input {
+  letter-spacing: 3px;
+}
+
+.input-flex {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.input-flex,
+.expire-date,
+.input-default,
+.cvv {
+  width: 100%;
+}
+
+.expire-date .input-flex {
+  color: var(--spanish-gray);
+  gap: 13px;
+}
+
+.expire-date .input-flex input {
+  text-align: center;
+}
+
+.btn {
+  border-radius: var(--radius);
+}
+
+.btn:active {
+  transform: scale(0.99);
+}
+
+.btn:focus {
+  color: var(--white);
+  background: var(--azure);
+  outline: 2px solid var(--azure);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background: var(--azure) !important;
+  font-weight: 500 !important;
+  color: var(--white) !important;
+  padding: 13px 45px !important;
+}
+
+.btn-primary b {
+  margin-right: 10px;
+}
+
+.cart {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cart-item-box {
+  padding: 0px 0px 0px 20px;
+}
+
+.product-card:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.product-card .card {
+  width: 90%;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 5px 10px;
+}
+
+.card .product-img {
+  border-radius: var(--radius);
+  height: 50px;
+  width: 60px;
+}
+
+.detail {
+  margin-left: 5px;
+  padding-left: 20px;
+}
+
+#product-close-btn {
+  margin-left: 35px;
+  padding-left: 80px;
+}
+
+.add-more {
+  padding: 5px 10px;
+  background-color: rgb(215, 64, 85);
+  color: #fff;
+  margin: 5px 0px 20px 320px;
+}
+
+.card .details .product-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--dim-gray);
+  margin-bottom: 10px;
+}
+
+h4.product-name {
+  margin: 0;
+}
+
+.card .detail .wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.product-qty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-qty button {
+  background: var(--platinum);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-qty button:active,
+.product-close-btn:active ion-icon {
+  transform: scale(0.95);
+}
+
+.product-qty button ion-icon {
+  --ionicon-stroke-width: 60px;
+  font-size: 10px;
+}
+
+.product-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.product-close-btn ion-icon {
+  font-size: 25px;
+  color: var(var(--quick-silver));
+}
+
+.product-close-btn:hover ion-icon {
+  color: var(--red-salsa);
+}
+
+.discount-token {
+  padding: 40px var(--px);
+  border-top: 1px solid var(--gainsboro);
+  border-bottom: 1px solid var(--gainsboro);
+}
+
+.wrapper-flex {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.wrapper-flex input {
+  padding: 12px 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.btn-outline {
+  padding: 10px 25px;
+  border: 1px solid var(--azure);
+  color: var(--azure);
+}
+
+.btn-outline:hover {
+  background: var(--azure);
+  color: var(--white);
+}
+
+.amount {
+  padding: 0px 40px var(--px);
+}
+
+.amount>div {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.amount>div:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.amount .total {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--onyx);
+}
+.img-box{
+  width: auto;
+}
+@media (max-width: 1200px) {
+  .item-flex {
+    flex-direction: column-reverse;
+  }
+
+  .checkout {
+    width: 100%;
+    border-right: none;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .cart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    border-bottom: 1px solid var(--gainsboro);
+  }
+
+  .cart .wrapper {
+    margin-top: auto;
+  }
+
+  .cart .cart-item-box {
+    border-right: 1px solid var(--gainsboro);
+    margin-bottom: 0;
+  }
+
+  .discount-token {
+    border-top: none;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --px: 40px;
+  }
+
+  .cart {
+    grid-template-columns: 1fr;
+  }
+
+  .discount-token {
+    border-top: 1px solid var(--gainsboro);
+  }
+
+  .wrapper-flex {
+    gap: 20px;
+  }
+  .add-more {
+    margin: 5px 0px 20px 196px;
+  }
+  .product-card .card {
+    width: 95%;
+    justify-content:space-between;
+  }
+  
+h4.product-name {
+  width: 180px;
+}
+.img-box{
+  width: 30%;
+}
+.detail{
+  width: 50%;
+}
+#product-close-btn {
+  width:20%;
+  padding-left: 50px;
+}
+}
+
+@media (max-width: 567px) {
+  :root {
+    --px: 20px;
+  }
+
+  .payment-method,
+  .input-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .payment-method .method {
+    width: 100%;
+  }
+
+  .input-flex .expire-date,
+  .input-flex .cvv {
+    width: 100%;
+  }
+
+  .expire-date .input-flex {
+    flex-direction: row;
+  }
+}

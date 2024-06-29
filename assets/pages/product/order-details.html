@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Order Page</title>
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/product/order.css">
+	<link rel="stylesheet" href="../../css/product/review.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="../../css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="../../css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="../../css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="../../css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="../../css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/product/shop.css">
+	<!-- responsive -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="../../css/scss/vendor/nice-select.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../../css/homepage/style.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="../../css/responsive.css">
+
+	<link rel="stylesheet" href="../../css/flaticon.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fuzzy+Bubbles:wght@400;700&family=Lemonada:wght@300&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div id="contain">
+		<!-- header -->
+		<div class="top-header-area" id="sticker">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-sm-12 text-center">
+						<div class="main-menu-wrap">
+							<!-- logo -->
+							<div class="site-logo">
+								<a href="../../../index.html">
+									<img src="../../img/logo.jpg" alt="">
+								</a>
+							</div>
+							<!-- logo -->
+
+							<!-- menu start -->
+							<nav class="main-menu">
+								<ul>
+									<li class="current-list-item"><a href="../../../index.html">Home</a></li>
+									<li><a href="../homepage/about.html">About</a></li>
+									<li><a href="shop.html">Shop</a></li>
+									<li><a href="">Order</a></li>
+									<li><a href="">Contact</a></li>
+									<li>
+										<div class="header-icons">
+											<a class="shopping-cart" href="cart.html"><i
+													class="fas fa-shopping-cart"></i></a>
+											<a href="../homepage/login.html"><button
+													class="login-btn">Login</button></a>
+										</div>
+									</li>
+								</ul>
+							</nav>
+							<div class="mobile-menu"></div>
+							<!-- menu end -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end header -->
+
+		<div id="whole-div">
+			<!-- tab-header -->
+			<div id="tab">
+				<div>
+					<span>Products</span>
+					<span id="order-no">(4)</span>
+				</div>
+				<div>
+					<span>Order ID</span>
+					<span id="order-id">#123</span>
+				</div>
+			</div>
+			<!-- end tab-header -->
+
+			<div class="tbl-header" id="prod-head">
+				<table cellpadding="0" cellspacing="0" border="0">
+					<thead>
+						<tr>
+							<th>Product Name</th>
+							<th>Product Desc</th>
+							<th>Quantity</th>
+							<th>Price</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+			<div class="tbl-content">
+				<table cellpadding="0" cellspacing="0" border="0" id="product-table">
+					<tbody>
+					</tbody>
+				</table>
+				</table>
+
+			</div>
+
+			<div>
+				<div id="order-detail"></div>
+			</div>
+
+		</div>
+	</div>
+	<div id="review">
+		<main>
+			<div class="containerDiv">
+				<div class="post">
+					<div class="text">Thanks for rating us!</div>
+					<a href="./order.html"><button class="btnDone">Done</button></a>
+				</div>
+				<div class="star-widget">
+					<input type="radio" name="rate" value="5" id="rate-5">
+					<label for="rate-5" class="fas fa-star"></label>
+					<input type="radio" name="rate" value="4" id="rate-4">
+					<label for="rate-4" class="fas fa-star"></label>
+					<input type="radio" name="rate" value="3" id="rate-3">
+					<label for="rate-3" class="fas fa-star"></label>
+					<input type="radio" name="rate" value="2" id="rate-2">
+					<label for="rate-2" class="fas fa-star"></label>
+					<input type="radio" name="rate" value="1" id="rate-1">
+					<label for="rate-1" class="fas fa-star"></label>
+					<form class="reviewForm" action="#">
+						<header class="comment"> </header>
+						<div class="textarea">
+							<textarea cols="30" id="about" placeholder="Describe your experience.."></textarea>
+						</div>
+						<div class="review-div" id="btn">
+							<button class="btnPost" id="btnPost" type="button">Post </button>
+							<button class="btnCancel" id="btnCancel" type="button">Cancel </button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../../js/product/order-details.js"></script>
+	<!-- jquery -->
+	<script src="../../js/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="../../bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="../../js/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="../../js/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="../../js/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="../../js/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="../../js/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="../../js/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="../../js/sticker.js"></script>
+	<!-- main js -->
+	<script src="../../js/main.js"></script>
+	<script src="../../js/vendor/jquery.nice-select.min.js"></script>
+	<!-- main js -->
+	<script src="../../js/profile/index.js"></script>
+</body>
+
+</html>

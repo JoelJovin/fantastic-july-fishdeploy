@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../../assets/css/account.css">
+        <link rel="stylesheet" href="../../assets/css/header.css">
+        <link rel="stylesheet" href="../../assets/css/footer.css">
+        <link rel="stylesheet" href="../../assets/css/add_address.css">
+        <link rel="stylesheet" href="/assets/css/myorder.css">
+        <link rel="stylesheet" href="../../assets/css/bootstrap css/bootstrap.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+
+        <title>Account</title>
+
+    </head>
+
+    <body>
+
+        <main>
+
+            <div class="header-account">
+                <div class="">
+                    <h2>Your Profile</h2>
+                </div>
+
+                <div>
+                    <span id="logout" onClick="logOut(event)">Log out</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <div class="account">
+
+                <div class="addressbook">
+
+                    <div class="heading">
+                        <h5> Address Book</h5>
+                    </div>
+
+                    <!-- <i class="fa-solid fa-location-dot"></i> -->
+
+                    <div class="createdAddress">
+
+
+                    </div>
+                    
+
+
+                    <div class="add btn">
+                        <i class="fa-solid fa-plus"></i> ADD NEW ADDRESS
+                    </div>
+
+
+                </div>
+
+<!-- Html code for add address page -->
+
+
+
+                <div class="profile_details">
+                    <div class="profile_details_table">
+
+                        <div class="heading">
+                            <div>
+                                <h3>profile details</h3>
+                            </div>
+
+<!-- unused code to delete a user -->
+
+                                <!-- <div>
+                                    <button id="remove" onClick="del(event)"><i class="fa-solid fa-trash"></i></button>
+                                </div> -->
+                        </div>
+
+                        <table id="user_data">
+
+                            <caption> </caption>
+
+                            <tr>
+                                <th></th>
+                            </tr>
+                            <tbody>
+
+                                <tr>
+                                    <td>Full Name</td>
+                                    <td id="fullname"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Mobile Number</td>
+                                    <td id="mobile_number"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Email Address</td>
+                                    <td id="email"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Gender</td>
+                                    <td id="gender"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Date of Birth</td>
+                                    <td id="dateofbirth"></td>
+                                </tr>
+
+                                <!-- <tr>
+                                    <td>address</td>
+                                    <td id="address"></td>
+                                    </tr> -->
+
+                                <tr>
+                                    <td>Hint Name</td>
+                                    <td id="hintname"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                            <div class="profile-editButton">
+                                <button>EDIT</button> 
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+
+            </footer>
+
+            <script src="/js/components/header.js"></script>
+            <script src="/js/components/footer.js"></script>
+            <script src="../../js/account.js"></script>
+            <script src="/js/components/myorder.js"></script>
+            <script src="/js/vendor/bootstrap.bundle.js"></script>
+            
+</body>
+
+</html>

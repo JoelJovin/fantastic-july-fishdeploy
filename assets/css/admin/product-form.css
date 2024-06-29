@@ -1,0 +1,215 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.main-menu-wrap {
+    padding: 0px 50px !important;
+}
+ul{
+    padding: 10px 50px 10px 280px !important;
+}
+main.body{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-form{
+  width: 850px;
+  background-color: #005baa;
+  background-image: linear-gradient(45deg, #005baa, #000000);
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container-form .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-form .content .left-side{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.content .left-side::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+.content .left-side .details{
+  margin: 14px;
+  text-align: center;
+}
+.content .left-side .details i{
+  font-size: 30px;
+  color: #f5f4f9;
+  margin-bottom: 10px;
+}
+.content .left-side .details .topic{
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.content .left-side .details .text-one,
+.content .left-side .details .text-two{
+  font-size: 14px;
+  color: #afafb6;
+}
+.container-form .content .right-side{
+  width: 75%;
+  margin-left: 75px;
+}
+.content .right-side .topic-text{
+  font-size: 23px;
+  font-weight: 600;
+  color: #f1eff5;
+}
+.right-side .input-box{
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.product-form{
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    flex-direction: column;
+    height: 300px;
+}
+.message-box input{
+   height: 100px !important;
+   width: 100% !important;
+}
+select, .right-side .input-box input, 
+.right-side .input-box textarea{
+margin: 0 10px;
+  height: 50px;
+  width: 220px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+
+.right-side .input-box textarea{
+  padding-top: 6px;
+}
+.right-side .button-input{
+    display: inline-block;
+    margin-top: 52px;
+    margin-left: 16px;
+}
+.right-side .button-input input[type="button"]{
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #3e2093;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom:20px;
+}
+.button-input input[type="button"]:hover{
+  background: #5029bc;
+}
+
+@media (max-width: 950px) {
+    main.body{
+        padding-top:100px;
+    }
+  .container-form{
+    width: 100%;
+    box-shadow:none;
+    background-color: #fff;
+    background-image: none;
+    padding: 30px 40px 40px 35px ;
+    overflow-x: hidden;
+  }
+  .container-form::-webkit-scrollbar {
+    display: none;
+}
+  .container-form .content .right-side{
+   width: 75%;
+   margin-left: 55px;
+}
+.content .right-side .topic-text {
+    color:  #3e2093;
+}
+.content .left-side .details i {
+    color:  #3e2093;;
+}
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    .input-box {
+        display: block !important;
+        margin-bottom: 10px !important;
+    }
+    .input-box input,
+    .input-box select {
+        width: 100% !important;
+        margin: 10px 20px 10px 0px!important;
+    }
+    .right-side .button-input{
+        margin-top: 82px;
+    }
+    .right-side .input-box {
+        padding: 62px 0 !important;
+    }
+    .right-side .input-box:first-child{
+        padding: 12px 0 !important;
+    }
+    #image_url{
+        padding-top: 15px;
+        margin-top: 20px !important;
+    }
+}
+
+
+@media (max-width: 767px) {
+.product-form{
+    height:100%;
+}
+  .container{
+    margin: 40px 0;
+    height: 100%;
+  }
+  .container-form .content{
+    flex-direction: column-reverse;
+  }
+ .container-form .content .left-side{
+   display:none;
+ }
+ .container-form .content .left-side::before{
+   display: none;
+ }
+ .container-form .content .right-side{
+   width: 100%;
+   margin-left: 0;
+ }
+}

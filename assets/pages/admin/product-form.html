@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Contact Us Form  | CodingLab </title>
+    <link rel="stylesheet" href="../../css/admin/product-form.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+    <div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="../../../index.html">
+								<img src="../../img/logo.jpg" alt="">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li class="current-list-item"><a href="../../../index.html">Home</a></li>
+								<li><a href="../../pages/homepage/about.html">About</a></li>
+								<li><a href="../../pages/product/shop.html">Shop</a></li>
+								<li><a href="news.html">Order</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart" href="cart.html"><i
+												class="fas fa-shopping-cart"></i></a>
+										<a href="../../pages/homepage/login.html"><button
+												class="login-btn">Login</button></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<main class="body">
+  <div class="container-form">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Product</div>
+          <div class="text-one">Basic product details</div>
+          <div class="text-two">and image</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Price</div>
+          <div class="text-one">Prices & Discounts</div>
+          <div class="text-two">of the product</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Description</div>
+          <div class="text-one">More info about</div>
+          <div class="text-two">the product</div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Product Form</div>
+        <form action="/addProduct" method="POST" class="product-form" id="product" enctype="multipart/form-data">
+          <div class="input-box">
+              <input type="text" pattern="^[a-zA-Z]+(\s{1}[a-zA-Z]+)*$" name="product_name" title="Only Alphabets and space is allowed" id="product_name" required placeholder="Product name - English">
+              <input type="text" name="product_name_tamil" id="product_name_tamil" placeholder="Product name - Tamil">
+          </div>
+          <div class="input-box">
+              <input type="file" style="padding-top:15px" name="image_url" placeholder="Product image" id="image_url" accept="image/*" required>
+              <select class="form-control" id="product_category" name="category" required>
+                  <option value="" disabled selected>Product Category</option>
+                  <option value="Shell fishes" class="status">Shell fishes</option>
+                  <option value="Dry fishes" class="status">Dry fishes</option>
+                  <option value="Marinated" class="status">Marinated</option>
+                  <option value="Uncategorized" class="status">Uncategorized</option>
+              </select>
+          </div>
+          <div class="input-box">
+              <input type="number" name="actual_price" placeholder="Actual Price" id="product_real" title="Only numbers are allowed" min="300" max="100000" required class="form-control">
+              <input type="number" name="discount" placeholder="Discount" id="product_discount" required title="Only 2 numbers are allowed" min="5" max="90" pattern="[1-9]{1}[0-9]{1}" class="form-control">
+          </div>
+          <div class="input-box">
+              <input type="number" name="gross" placeholder="Gross" id="gross" title="Only numbers are allowed" min="300" max="100000" required class="form-control">
+              <input type="number" name="net" placeholder="Net" id="product_net" required title="Only 2 numbers are allowed" min="5" max="90" pattern="[1-9]{1}[0-9]{1}" class="form-control">
+          </div>
+          <div class="input-box">
+              <input type="number" name="serves" placeholder="Serves" id="product_serves" title="Only numbers are allowed" min="300" max="100000" required class="form-control">
+              <input type="number" name="pieces" placeholder="Pieces" id="product_pieces" required title="Only 2 numbers are allowed" min="5" max="90" pattern="[1-9]{1}[0-9]{1}" class="form-control">
+          </div>
+          <div class="input-box message-box">
+              <input type="text" name="description" placeholder="Product Description" id="product_description" required class="form-control">
+          </div>
+          <div class="button-input">
+              <button type="submit">Send Now</button>
+          </div>
+      </form>
+      
+    </div>
+    </div>
+  </div>
+</main>
+<script>
+    document.getElementById('productForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(this);
+    console.log(formData);
+    fetch('/addProduct', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.success) {
+            alert('Product added successfully!');
+        } else {
+            alert('Error: ' + data.error);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while adding the product. Please try again.');
+    });
+});
+
+</script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>
