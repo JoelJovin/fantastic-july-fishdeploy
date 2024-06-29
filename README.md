@@ -34,9 +34,10 @@ This guide will walk you through setting up the backend connection for the aazhi
 
 5. Install MULTER packages:
        ```bash
-    npm install multer
-    ```
-6. Install MySQL latest version:
+   npm install multer
+   ```
+    
+7. Install MySQL latest version:
        ```bash
     npm install mysql@latest
     ```
