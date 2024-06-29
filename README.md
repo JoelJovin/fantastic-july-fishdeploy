@@ -6,9 +6,8 @@ This guide will walk you through setting up the backend connection for the Aazhi
 
 ## Prerequisites
 
-- Node.js installed on your machine. You can download it from [here](https://nodejs.org/](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)).
-- MySQL installed on your machine. You can download it from [here](https://www.mysql.com/](https://dev.mysql.com/doc/refman/8.3/en/windows-installation.html)).
-
+- Node.js installed on your machine. 
+- MySQL installed on your machine. 
 
 ## Installation
 
